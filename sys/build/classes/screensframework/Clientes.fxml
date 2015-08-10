@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Ventana mantenimiento de Clientes-->
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="1024.0" styleClass="mainFxmlClass, fondoanchor" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="screensframework.ClientesController">
+  <children>
+    <VBox layoutX="14.0" layoutY="14.0" prefHeight="622.0" prefWidth="996.0">
+      <children>
+        <HBox id="cabecera" minHeight="90.0" prefHeight="108.0" prefWidth="996.0" spacing="20.0" styleClass="fondbox" VBox.margin="$x1">
+          <children>
+            <Label prefWidth="368.0" styleClass="labels" text="OssaSysVet" textFill="WHITE">
+              <effect>
+                <Bloom />
+              </effect>
+              <font>
+                <Font size="17.0" />
+              </font>
+              <stylesheets>
+                <URL value="@../img_css/estilo1.css" />
+              </stylesheets>
+            </Label>
+            <ImageView fitHeight="80.52332713992097" fitWidth="119.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../img_css/logo-animado4.gif" preserveRatio="false" smooth="false" />
+              </image>
+              <HBox.margin>
+                <Insets fx:id="x1" />
+              </HBox.margin>
+            </ImageView>
+          </children>
+          <effect>
+            <InnerShadow />
+          </effect>
+          <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+          </padding>
+          <stylesheets>
+            <URL value="@../img_css/estilo1.css" />
+          </stylesheets>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="24.0" prefWidth="1294.0">
+          <children>
+            <MenuBar prefWidth="1308.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="Sistema">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#irInicioContenido" text="Inicio" />
+                    <MenuItem mnemonicParsing="false" onAction="#cerrarSesion" text="Cerrar sesión" />
+                    <MenuItem mnemonicParsing="false" onAction="#salir" text="Salir" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Mantenimiento">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#irMantenimientoMascotas" text="Mascotas" />
+                    <MenuItem mnemonicParsing="false" onAction="#irMantenimientoServicio" text="Servicios" />
+                    <MenuItem mnemonicParsing="false" onAction="#irMantenimientoMedicamentos" text="Medicamentos" />
+                    <MenuItem mnemonicParsing="false" onAction="#irMantenimientoVacunacion" text="Vacunas" />
+                    <MenuItem mnemonicParsing="false" onAction="#irMantenimientoConsulta" text="Consultas" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="A cerca de" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+          </children>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="490.0" prefWidth="1009.0000999999975">
+          <VBox.margin>
+            <Insets fx:id="x" />
+          </VBox.margin>
+        </HBox>
+        <HBox alignment="CENTER_RIGHT" minHeight="8.0" prefHeight="19.0" prefWidth="1010.0" spacing="20.0">
+          <children>
+            <Hyperlink text="Prenferencias" />
+            <Hyperlink text="" />
+            <Hyperlink onAction="#salir" text="Salir del sistema" />
+          </children>
+          <padding>
+            <Insets right="10.0" />
+          </padding>
+          <VBox.margin>
+            <Insets fx:id="" />
+          </VBox.margin>
+        </HBox>
+      </children>
+      <stylesheets>
+        <URL value="@../img_css/estilo1.css" />
+      </stylesheets>
+    </VBox>
+    <Pane layoutX="14.0" layoutY="138.0" prefHeight="483.0" prefWidth="996.0" styleClass="paneles">
+      <children>
+        <SplitPane dividerPositions="" focusTraversable="true" layoutX="10.0" layoutY="5.0" prefHeight="454.99995585936995" prefWidth="700.0" />
+        <AnchorPane layoutX="710.0" layoutY="5.0" minHeight="0.0" minWidth="0.0" prefHeight="428.0" prefWidth="272.0">
+          <children>
+            <Label layoutX="17.0" layoutY="74.0" text="Cedula" />
+            <Label layoutX="13.0" layoutY="119.0" text="Nombre" />
+            <Label layoutX="13.0" layoutY="154.0" text="Apellido" />
+            <Label layoutX="12.0" layoutY="198.0" text="Direccion" />
+            <Label layoutX="17.0" layoutY="270.0" prefHeight="29.0" text="Telefono" />
+            <TextField fx:id="tfNombreCliente"  layoutX="80.0" layoutY="74.0" prefWidth="178.0" />
+            <TextField fx:id="tfClienteApellido" layoutX="80.0" layoutY="148.0" prefWidth="178.0" />
+            <TextField id="tfClientePrecio" fx:id="tfPrecioCliente" layoutX="80.0" layoutY="113.0" prefWidth="178.0" />
+            <TextField fx:id="tfClienteDir" layoutX="80.0" layoutY="192.0" prefWidth="178.0" />
+            <TextField fx:id="tfClienteCiudad" layoutX="80.0" layoutY="234.0" prefWidth="177.33990478515625" />
+            <TextField fx:id="tfClienteTel" layoutX="80.0" layoutY="277.0" prefWidth="177.33990478515625" />
+            <Button fx:id="btAddCliente" layoutX="39.0" layoutY="328.0" mnemonicParsing="false" onAction="#addCliente" prefHeight="29.0" prefWidth="92.0" styleClass="botones" text="Añadir" textFill="WHITE">
+              <font>
+                <Font name="System Bold" size="12.0" fx:id="x2" />
+              </font>
+              <stylesheets>
+                <URL value="@../img_css/estilo1.css" />
+              </stylesheets>
+            </Button>
+            <Button fx:id="btModificarCliente" font="$x2" layoutX="162.0" layoutY="328.0" minHeight="17.0" mnemonicParsing="false" onAction="#modificarCliente" prefHeight="29.0" prefWidth="92.0" styleClass="botones" text="Modificar" textFill="WHITE">
+              <stylesheets>
+                <URL value="@../img_css/estilo1.css" />
+              </stylesheets>
+            </Button>
+            <Button fx:id="btEliminarCliente" font="$x2" layoutX="37.0" layoutY="385.0" mnemonicParsing="false" onAction="#eliminarCliente" prefHeight="29.0" prefWidth="92.0" styleClass="botones" text="Eliminar" textFill="WHITE">
+              <stylesheets>
+                <URL value="@../img_css/estilo1.css" />
+              </stylesheets>
+            </Button>
+            <Button fx:id="btNuevoCliente" font="$x2" layoutX="162.0" layoutY="385.0" minHeight="21.0" mnemonicParsing="false" onAction="#nuevoCliente" prefHeight="29.0" prefWidth="92.0" styleClass="botones" text="Nuevo" textFill="WHITE">
+              <stylesheets>
+                <URL value="@../img_css/estilo1.css" />
+              </stylesheets>
+            </Button>
+            <Label layoutX="101.0" layoutY="14.0" prefWidth="68.0" text="Clientes" textAlignment="LEFT">
+              <font>
+                <Font name="System Bold" size="14.0" fx:id="x3" />
+              </font>
+            </Label>
+            <!--  <Label fx:id="lbCodigoCliente" font="$x3" layoutX="76.0" layoutY="40.0" prefHeight="24.0" prefWidth="92.0" text="" textFill="#cc0000" />
+            <Label layoutX="32.0" layoutY="44.0" text="Cod:" />-->
+            <Label layoutX="24.0" layoutY="240.0" text="Ciudad" />
+          </children>
+        </AnchorPane>
+        <AnchorPane layoutX="225.0" layoutY="0.0" minHeight="0.0" minWidth="0.0" prefHeight="22.0" prefWidth="102.0">
+          <children>
+            <TableView fx:id="tablaCliente" layoutX="-201.0" layoutY="82.0" onMouseClicked="#getClienteSeleccionado" prefHeight="359.0" prefWidth="673.0" />
+            <TextField fx:id="tfBuscarCliente" layoutX="-186.0" layoutY="26.0" prefWidth="174.0" promptText="Ingrese el Número de Cédula" />
+            <Button font="$x2" layoutX="0.0" layoutY="26.0" mnemonicParsing="false" onAction="#buscarCliente" styleClass="botones" text="Buscar" textFill="WHITE">
+              <stylesheets>
+                <URL value="@../img_css/estilo1.css" />
+              </stylesheets>
+            </Button>
+            <Button font="$x2" layoutX="274.0" layoutY="25.0" mnemonicParsing="false" onAction="#reporteClientes" styleClass="botones" text="Reporte" textFill="WHITE">
+              <stylesheets>
+                <URL value="@../img_css/estilo1.css" />
+              </stylesheets>
+            </Button>
+          </children>
+        </AnchorPane>
+      </children>
+      <effect>
+        <InnerShadow />
+      </effect>
+      <stylesheets>
+        <URL value="@../img_css/estilo1.css" />
+      </stylesheets>
+    </Pane>
+  </children>
+  <stylesheets>
+    <URL value="@../img_css/estilo1.css" />
+  </stylesheets>
+</AnchorPane>

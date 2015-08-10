@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="SysVete_1.jnlp">
+  <information>
+    <title>SysVete_1</title>
+    <vendor>Angie</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <jfx:javafx-runtime version="2.2+" href="http://javadl.sun.com/webapps/download/GetFile/javafx-latest/windows-i586/javafx2.jnlp"/>
+  </resources>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="SysVete_1.jar" size="957122" download="eager" />
+    <jar href="lib/JDescomSMS.jar" size="14148" download="eager" />
+    <jar href="lib/JasperReportViewer.jar" size="69474" download="eager" />
+    <jar href="lib/apache-commons-codec-1.3.jar" size="46725" download="eager" />
+    <jar href="lib/commons-beanutils-1.7.jar" size="188671" download="eager" />
+    <jar href="lib/commons-beanutils-1.8.0.jar" size="231320" download="eager" />
+    <jar href="lib/commons-codec-1.7.jar" size="259600" download="eager" />
+    <jar href="lib/commons-collections-2.1.1.jar" size="175426" download="eager" />
+    <jar href="lib/commons-collections-2.1.jar" size="165119" download="eager" />
+    <jar href="lib/commons-digester-1.7.jar" size="139966" download="eager" />
+    <jar href="lib/commons-javaflow-20060411.jar" size="96529" download="eager" />
+    <jar href="lib/commons-logging-1.0.2.jar" size="26388" download="eager" />
+    <jar href="lib/dsn.jar" size="19175" download="eager" />
+    <jar href="lib/gimap.jar" size="14772" download="eager" />
+    <jar href="lib/iText-2.1.0.jar" size="1050691" download="eager" />
+    <jar href="lib/jasperreports-2.0.3.jar" size="1915794" download="eager" />
+    <jar href="lib/jasperreports-3.6.1.jar" size="2603640" download="eager" />
+    <jar href="lib/jasperreports-javaflow-3.6.1.jar" size="2644150" download="eager" />
+    <jar href="lib/javafx-datepicker-0.0.2.jar" size="47141" download="eager" />
+    <jar href="lib/jdt-compiler-3.1.1.jar" size="1212369" download="eager" />
+    <jar href="lib/jfreechart-1.0.0.jar" size="1072312" download="eager" />
+    <jar href="lib/kxml2-2.3.0.jar" size="43858" download="eager" />
+    <jar href="lib/kxml2-min-2.3.0.jar" size="10649" download="eager" />
+    <jar href="lib/mail.jar" size="521052" download="eager" />
+    <jar href="lib/mailapi.jar" size="279899" download="eager" />
+    <jar href="lib/png-encoder-1.5.jar" size="10266" download="eager" />
+    <jar href="lib/poi-3.2-FINAL-20081019.jar" size="1428690" download="eager" />
+    <jar href="lib/pop3.jar" size="44410" download="eager" />
+    <jar href="lib/postgresql-9.1-902.jdbc4.jar" size="561969" download="eager" />
+    <jar href="lib/postgresql-9.2-1002.jdbc4.jar" size="571894" download="eager" />
+    <jar href="lib/smtp.jar" size="52898" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="SysVete_1" >
+    <param name="requiredFXVersion" value="2.2+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="screensframework.ScreensFramework"  name="SysVete_1" />
+  <update check="always"/>
+</jnlp>

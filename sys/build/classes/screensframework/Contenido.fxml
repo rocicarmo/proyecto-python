@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Ventana Principal-->
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="1024.0" styleClass="mainFxmlClass, fondoanchor" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="screensframework.ContenidoController">
+  <children>
+    <VBox layoutX="15.0" layoutY="14.0" prefHeight="636.0" prefWidth="1009.0">
+      <children>
+        <HBox alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="1331.0" spacing="20.0">
+          <padding>
+            <Insets right="10.0" />
+          </padding>
+        </HBox>
+      </children>
+      <stylesheets>
+        <URL value="@../img_css/estilo1.css" />
+      </stylesheets>
+    </VBox>
+    <HBox id="panelSecundario" alignment="CENTER" layoutX="0.0" layoutY="14.0" prefHeight="617.0" prefWidth="1024.0">
+      <children>
+        <Pane id="panel3" prefHeight="614.0" prefWidth="979.0" styleClass="paneles">
+          <children>
+            <MenuBar id="menu" layoutX="0.0" layoutY="112.0" minHeight="22.0" prefHeight="22.0" prefWidth="979.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="Sistema">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#cerrarSesion" text="Cerrar sesión" />
+                    <MenuItem mnemonicParsing="false" onAction="#salir" text="Salir" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Mantenimiento">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#irMantenimientoCliente" text="Clientes" />
+                    <MenuItem mnemonicParsing="false" onAction="#irMantenimientoMascotas" text="Mascotas" />
+                    <MenuItem mnemonicParsing="false" onAction="#irMantenimientoServicio" text="Servicios" />
+                    <MenuItem mnemonicParsing="false" onAction="#irMantenimientoMedicamentos" text="Medicamentos" />
+                    <MenuItem mnemonicParsing="false" onAction="#irMantenimientoVacunacion" text="Vacunas" />
+                    <MenuItem mnemonicParsing="false" onAction="#irMantenimientoConsulta" text="Consultas" />
+                    <MenuItem mnemonicParsing="false" onAction="#irMantenimientoHistorial" text="Historial" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="A cerca de" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <HBox id="cabecera" layoutX="0.0" layoutY="0.0" minHeight="90.0" prefHeight="112.0" prefWidth="979.0" spacing="20.0" styleClass="fondbox">
+              <children>
+                <Label minHeight="67.0" prefHeight="67.0" prefWidth="239.0001220703125" styleClass="labels" text="OssaSysVet" textFill="WHITE">
+                  <effect>
+                    <Bloom />
+                  </effect>
+                  <font>
+                    <Font size="17.0" />
+                  </font>
+                  <stylesheets>
+                    <URL value="@../img_css/estilo1.css" />
+                  </stylesheets>
+                </Label>
+                <ImageView fitHeight="81.0" fitWidth="119.70443651381473" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@../img_css/logo-animado4.gif" preserveRatio="false" smooth="false" />
+                  </image>
+                </ImageView>
+              </children>
+              <effect>
+                <InnerShadow />
+              </effect>
+              <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+              </padding>
+              <stylesheets>
+                <URL value="@../img_css/estilo1.css" />
+              </stylesheets>
+            </HBox>
+            <Button styleClass="botonesGrandes" alignment="CENTER" contentDisplay="RIGHT" layoutX="414.0" layoutY="267.0" mnemonicParsing="false" onAction="#irMantenimientoCliente" prefHeight="60.499900000002526" prefWidth="127.0" text="Clientes" wrapText="false" />
+            <Button styleClass="botonesGrandes" contentDisplay="CENTER" layoutX="160.0" layoutY="265.0" mnemonicParsing="false" onAction="#irMantenimientoMascotas" prefHeight="60.499908447265625" prefWidth="120.0" text=" Mascotas" textFill="BLACK" wrapText="false">
+              <font>
+                <Font size="12.0" fx:id="x2" />
+              </font>
+            </Button>
+            <Button styleClass="botonesGrandes" font="$x2" layoutX="410.0" layoutY="429.0" mnemonicParsing="false" onAction="#irMantenimientoMedicamentos" prefHeight="60.4998779296875" prefWidth="120.0" text="Medicamentos" textFill="BLACK" wrapText="false" />
+            <Button styleClass="botonesGrandes" alignment="CENTER" contentDisplay="CENTER" font="$x2" layoutX="156.0" layoutY="423.0" mnemonicParsing="false" onAction="#irMantenimientoVacunacion" prefHeight="60.4998863769506" prefWidth="127.00009999999747" text="Vacunas" textFill="BLACK" wrapText="false" />
+            <Button styleClass="botonesGrandes" defaultButton="false" font="$x2" graphicTextGap="6.0" layoutX="710.0" layoutY="438.0" mnemonicParsing="false" prefHeight="60.499908447265625" prefWidth="119.99997792968497" text="Consulta" textFill="BLACK" underline="false" wrapText="false" />
+            <Button styleClass="botonesGrandes" font="$x2" layoutX="710.0" layoutY="268.0" mnemonicParsing="false" onAction="#irMantenimientoServicio" prefHeight="60.499908447265625" prefWidth="120.0" text="Servicios" textFill="BLACK" wrapText="false" />
+            <ImageView fitHeight="63.5" fitWidth="63.5" layoutX="633.0" layoutY="435.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../img_css/consulta.png" />
+              </image>
+            </ImageView>
+            <ImageView fitHeight="63.5" fitWidth="63.5" layoutX="89.0" layoutY="261.0" opacity="0.53" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../img_css/mascota.png" />
+              </image>
+            </ImageView>
+            <ImageView fitHeight="60.5" fitWidth="60.5" layoutX="340.0" layoutY="267.0" opacity="0.56" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../img_css/clientes.png" />
+              </image>
+            </ImageView>
+            <ImageView fitHeight="67.02501588732727" fitWidth="56.64086151123047" layoutX="633.0" layoutY="265.0" opacity="0.64" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../img_css/servicios.png" />
+              </image>
+            </ImageView>
+            <ImageView fitHeight="50.5" fitWidth="50.5" layoutX="89.0" layoutY="448.0" opacity="0.47" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../img_css/vacunas.png" />
+              </image>
+            </ImageView>
+            <ImageView fitHeight="50.5" fitWidth="50.5" layoutX="338.0" layoutY="439.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../img_css/medicamentos.png" />
+              </image>
+            </ImageView>
+            <Label id="Usuario" layoutX="239.0" layoutY="182.0" prefWidth="72.0" text="" />
+            <Label fx:id="prueba" layoutX="433.0" layoutY="166.0" prefWidth="200.0" />
+            <!--  <Button alignment="CENTER" contentDisplay="CENTER" font="$x2" layoutX="243.0" layoutY="534.0" mnemonicParsing="false" onAction="#irMantenimientoVacunacion" prefHeight="60.4998863769506" prefWidth="127.00009999999747" text="\" textFill="BLACK" wrapText="false" />-->
+          </children>
+          <effect>
+            <InnerShadow />
+          </effect>
+          <stylesheets>
+            <URL value="@../img_css/estilo1.css" />
+          </stylesheets>
+        </Pane>
+      </children>
+    </HBox>
+  </children>
+  <stylesheets>
+    <URL value="@../img_css/estilo1.css" />
+  </stylesheets>
+</AnchorPane>

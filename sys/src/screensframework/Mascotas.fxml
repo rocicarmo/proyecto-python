@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="652.0" prefWidth="1024.0" styleClass="mainFxmlClass, fondoanchor" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="screensframework.MascotasController">
+  <children>
+    <AnchorPane layoutX="64.0" layoutY="406.0" minHeight="0.0" minWidth="500.0" prefHeight="257.0" prefWidth="885.0" />
+    <HBox alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="600.0" spacing="20.0">
+      <children>
+        <HBox alignment="CENTER" prefHeight="0.0" prefWidth="1291.0">
+          <children>
+            <HBox alignment="CENTER" prefHeight="192.0" prefWidth="800.0" />
+          </children>
+        </HBox>
+        <Hyperlink text="Preferencias" />
+        <Hyperlink text="Ayuda" />
+        <Hyperlink onAction="#salir" text="Salir del sistema" />
+      </children>
+      <padding>
+        <Insets right="10.0" />
+      </padding>
+    </HBox>
+    <Pane id="hpMascotas" layoutX="14.0" layoutY="349.0" prefHeight="278.0" prefWidth="996.0" styleClass="paneles">
+      <children>
+        <SplitPane id="spMascotas" dividerPositions="" focusTraversable="true" layoutX="17.0" layoutY="79.0" prefHeight="185.99997792968497" prefWidth="932.999977929685" />
+        <TableView fx:id="tablaMascotas" layoutX="28.0" layoutY="91.0" onMouseClicked="#getMascotaSeleccionada" prefHeight="159.99996948242188" prefWidth="914.0" />
+        <TextField fx:id="tfBuscarMascota" layoutX="35.0" layoutY="48.0" prefWidth="200.0" promptText="Ingrese la Mascota a buscar" />
+        <Button layoutX="276.0" layoutY="48.0" mnemonicParsing="false" onAction="#buscarMascota" styleClass="botones" text="Buscar" textFill="WHITE">
+          <font>
+            <Font name="System Bold" size="12.0" fx:id="x2" />
+          </font>
+          <stylesheets>
+            <URL value="@../img_css/estilo1.css" />
+          </stylesheets>
+        </Button>
+        <Pane layoutX="1.0" layoutY="-306.0" prefHeight="349.0" prefWidth="995.9999000000025" styleClass="paneles">
+          <children>
+            <MenuBar id="menu" layoutX="0.0" layoutY="85.0" minHeight="16.0" prefHeight="21.9609375" prefWidth="995.999977929685">
+              <menus>
+                <Menu mnemonicParsing="false" text="Sistema">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#irInicioContenido" text="Inicio" />
+                    <MenuItem mnemonicParsing="false" onAction="#cerrarSesion" text="Cerrar sesión" />
+                    <MenuItem mnemonicParsing="false" onAction="#salir" text="Salir" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Mantenimiento">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#irMantenimientoCliente" text="Clientes" />
+                    <MenuItem mnemonicParsing="false" onAction="#irMantenimientoServicio" text="Servicios" />
+                    <MenuItem mnemonicParsing="false" onAction="#irMantenimientoMedicamentos" text="Medicamentos" />
+                    <MenuItem mnemonicParsing="false" onAction="#irMantenimientoVacunacion" text="Vacunas" />
+                    <MenuItem mnemonicParsing="false" onAction="#irMantenimientoConsulta" text="Consultas" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Ayuda">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="A cerca de" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <SplitPane dividerPositions="" focusTraversable="true" layoutX="14.0" layoutY="124.0" prefHeight="186.0" prefWidth="933.0" />
+            <VBox layoutX="0.0" layoutY="-17.0" minHeight="101.0" prefHeight="106.0" prefWidth="995.9998915527394">
+              <children>
+                <HBox id="cabecera" minHeight="101.0" prefHeight="105.0" prefWidth="995.9998779296875" spacing="20.0" styleClass="fondbox">
+                  <children>
+                    <Label prefHeight="84.0" prefWidth="325.0" styleClass="labels" text="OssaSysVet" textFill="WHITE">
+                      <effect>
+                        <Bloom />
+                      </effect>
+                      <font>
+                        <Font size="10.0" />
+                      </font>
+                      <stylesheets>
+                        <URL value="@../img_css/estilo1.css" />
+                      </stylesheets>
+                    </Label>
+                    <ImageView fitHeight="83.90672202457351" fitWidth="124.00008474120841" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                        <Image url="@../img_css/logo-animado4.gif" preserveRatio="false" smooth="false" />
+                      </image>
+                      <HBox.margin>
+                        <Insets fx:id="x1" />
+                      </HBox.margin>
+                    </ImageView>
+                  </children>
+                  <effect>
+                    <InnerShadow />
+                  </effect>
+                  <padding>
+                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                  </padding>
+                  <stylesheets>
+                    <URL value="@../img_css/estilo1.css" />
+                  </stylesheets>
+                </HBox>
+              </children>
+              <stylesheets>
+                <URL value="@../img_css/estilo1.css" />
+              </stylesheets>
+            </VBox>
+            <Button fx:id="btNuevoMascota" font="$x2" layoutX="865.0" layoutY="315.0" minHeight="19.0" mnemonicParsing="false" onAction="#nuevaMascota" prefHeight="25.0" prefWidth="82.00002207031503" styleClass="botones" text="Nuevo" textFill="WHITE">
+              <stylesheets>
+                <URL value="@../img_css/estilo1.css" />
+              </stylesheets>
+            </Button>
+            <Button fx:id="btEliminarMascota" font="$x2" layoutX="772.0" layoutY="315.0" mnemonicParsing="false" onAction="#eliminarMascota" prefHeight="24.999900000002526" prefWidth="82.0" styleClass="botones" text="Eliminar" textFill="WHITE">
+              <stylesheets>
+                <URL value="@../img_css/estilo1.css" />
+              </stylesheets>
+            </Button>
+            <Button fx:id="btModificarMascota" font="$x2" layoutX="678.0" layoutY="315.0" mnemonicParsing="false" onAction="#modificarMascota" prefHeight="25.0" prefWidth="82.0000168945262" styleClass="botones" text="Modificar" textFill="WHITE">
+              <stylesheets>
+                <URL value="@../img_css/estilo1.css" />
+              </stylesheets>
+            </Button>
+            <AnchorPane layoutX="17.0" layoutY="108.0" minHeight="0.0" minWidth="0.0" prefHeight="202.0" prefWidth="925.0">
+              <children>
+                <AnchorPane layoutX="0.0" layoutY="7.0" minHeight="0.0" minWidth="0.0" prefHeight="138.0" prefWidth="393.0">
+                  <children>
+                    <TableView fx:id="tablaClientes" layoutX="22.0" layoutY="65.0" onMouseClicked="#getClienteSeleccionado" prefHeight="71.0" prefWidth="349.0" />
+                    <TextField fx:id="tfBuscarCliente" layoutX="22.0" layoutY="36.0" prefWidth="200.0" promptText="Ingrese el Cliente a buscar" />
+                    <Button font="$x2" layoutX="241.0" layoutY="35.0" mnemonicParsing="false" onAction="#buscarCliente" styleClass="botones" text="Buscar" textFill="WHITE">
+                      <stylesheets>
+                        <URL value="@../img_css/estilo1.css" />
+                      </stylesheets>
+                    </Button>
+                    <Label layoutX="624.0" layoutY="19.0" prefWidth="92.0" text="Mascotas" textAlignment="LEFT">
+                      <font>
+                        <Font name="System Bold" size="14.0" fx:id="x5" />
+                      </font>
+                    </Label>
+                    <Label layoutX="450.0" layoutY="54.0" text="Cod:" />
+                    <Label layoutX="428.0" layoutY="81.0" text="Nombre" />
+                    <Label layoutX="445.0" layoutY="152.0" text="Sexo" />
+                    <TextField fx:id="tfSexoMascota" layoutX="481.0" layoutY="152.0" prefWidth="44.0" />
+                    <Label layoutX="445.0" layoutY="121.0" prefWidth="27.0" text="Raza" />
+                    <TextField fx:id="tfRazaMascota" layoutX="481.0" layoutY="118.0" prefWidth="188.00009999999747" />
+                    <Label layoutX="695.0" layoutY="81.0" prefWidth="60.0" text="Fecha Nac" />
+                    <TextField fx:id="tfFechaNacMascota" layoutX="773.0" layoutY="78.0" prefWidth="134.0" />
+                    <Label fx:id="lbCodMascota" font="$x5" layoutX="482.0" layoutY="46.0" prefHeight="24.0" prefWidth="82.0" text="">
+                      <textFill>
+                        <Color blue="0.000" green="0.000" red="0.800" fx:id="x4" />
+                      </textFill>
+                    </Label>
+                    <TextField fx:id="tfNombreMascota" layoutX="482.0" layoutY="78.0" prefWidth="188.0" />
+                    <Label font="$x5" layoutX="22.0" layoutY="15.0" prefWidth="111.0" text="Buscar Cliente" textAlignment="LEFT" />
+                    <Label layoutX="773.0" layoutY="103.0" prefWidth="71.0" text="aaaa-mm-dd" />
+                    <Label layoutX="22.0" layoutY="155.0" prefWidth="56.0" text="Nombre:" />
+                    <Label fx:id="lbClienteNombre" layoutX="87.0" layoutY="152.0" prefWidth="306.0" textFill="$x4" />
+                  </children>
+                </AnchorPane>
+                <Label layoutX="10.0" layoutY="170.0" prefHeight="23.0" text="" />
+                <Label fx:id="lbCodApellido" layoutX="87.0" layoutY="178.0" prefHeight="16.0" prefWidth="276.0" text="" textFill="$x4">
+                  <font>
+                    <Font size="12.0" fx:id="x3" />
+                  </font>
+                </Label>
+                <Label layoutX="22.0" layoutY="181.0" prefWidth="60.0" text="Apellido:" />
+              </children>
+            </AnchorPane>
+            <Button fx:id="btAddMascota" font="$x2" layoutX="582.0" layoutY="315.0" mnemonicParsing="false" onAction="#addMascota" prefHeight="25.0" prefWidth="82.00002207031503" styleClass="botones" text="Añadir" textFill="WHITE">
+              <stylesheets>
+                <URL value="@../img_css/estilo1.css" />
+              </stylesheets>
+            </Button>
+          </children>
+          <effect>
+            <InnerShadow />
+          </effect>
+          <stylesheets>
+            <URL value="@../img_css/estilo1.css" />
+          </stylesheets>
+        </Pane>
+      </children>
+      <effect>
+        <InnerShadow />
+      </effect>
+      <stylesheets>
+        <URL value="file:/D:/Tesis/SysVete_1/src/img_css/estilo1.css" />
+      </stylesheets>
+    </Pane>
+  </children>
+  <stylesheets>
+    <URL value="@../img_css/estilo1.css" />
+  </stylesheets>
+</AnchorPane>

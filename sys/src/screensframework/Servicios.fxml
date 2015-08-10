@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="1024.0" styleClass="mainFxmlClass, fondoanchor" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="screensframework.ServiciosController">
+  <children>
+    <VBox layoutX="15.0" layoutY="14.0" prefHeight="614.0" prefWidth="996.0">
+      <children>
+        <HBox id="cabecera" minHeight="110.0" prefHeight="113.0" prefWidth="996.0001220703125" spacing="20.0" styleClass="fondbox" VBox.margin="$x1">
+          <children>
+            <Label prefWidth="368.0" styleClass="labels" text="OssaSysVet" textFill="WHITE">
+              <effect>
+                <Bloom />
+              </effect>
+              <font>
+                <Font size="17.0" />
+              </font>
+              <stylesheets>
+                <URL value="@../img_css/estilo1.css" />
+              </stylesheets>
+            </Label>
+            <ImageView fitHeight="93.60999624719483" fitWidth="138.33990478515625" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../img_css/logo-animado4.gif" preserveRatio="false" smooth="false" />
+              </image>
+              <HBox.margin>
+                <Insets fx:id="x1" />
+              </HBox.margin>
+            </ImageView>
+          </children>
+          <effect>
+            <InnerShadow />
+          </effect>
+          <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+          </padding>
+          <stylesheets>
+            <URL value="@../img_css/estilo1.css" />
+          </stylesheets>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="489.0" prefWidth="996.0">
+          <children>
+            <Pane prefHeight="490.0" prefWidth="996.0" styleClass="paneles">
+              <children>
+                <MenuBar id="menu" layoutX="1.0" layoutY="0.0" prefHeight="24.0" prefWidth="996.0000999999975">
+                  <menus>
+                    <Menu mnemonicParsing="false" text="Sistema">
+                      <items>
+                        <MenuItem mnemonicParsing="false" onAction="#irInicioContenido" text="Inicio" />
+                        <MenuItem mnemonicParsing="false" onAction="#cerrarSesion" text="Cerrar sesión" />
+                        <MenuItem mnemonicParsing="false" onAction="#salir" text="Salir" />
+                      </items>
+                    </Menu>
+                    <Menu mnemonicParsing="false" text="Mantenimiento">
+                      <items>
+                        <MenuItem mnemonicParsing="false" onAction="#irMantenimientoCliente" text="Clientes" />
+                        <MenuItem mnemonicParsing="false" onAction="#irMantenimientoMascotas" text="Mascotas" />
+                        <MenuItem mnemonicParsing="false" onAction="#irMantenimientoMedicamentos" text="Medicamentos" />
+                        <MenuItem mnemonicParsing="false" onAction="#irMantenimientoVacunacion" text="Vacunas" />
+                        <MenuItem mnemonicParsing="false" onAction="#irMantenimientoConsulta" text="Consultas" />
+                      </items>
+                    </Menu>
+                    <Menu mnemonicParsing="false" text="">
+                      <items>
+                        <MenuItem mnemonicParsing="false" text="A cerca de" />
+                      </items>
+                    </Menu>
+                  </menus>
+                </MenuBar>
+              </children>
+              <effect>
+                <InnerShadow />
+              </effect>
+              <stylesheets>
+                <URL value="@../img_css/estilo1.css" />
+              </stylesheets>
+            </Pane>
+          </children>
+          <VBox.margin>
+            <Insets fx:id="x" />
+          </VBox.margin>
+        </HBox>
+      </children>
+      <stylesheets>
+        <URL value="@../img_css/estilo1.css" />
+      </stylesheets>
+    </VBox>
+    <HBox alignment="CENTER_RIGHT" layoutX="3.0" layoutY="614.0" minHeight="21.0" prefHeight="37.0" prefWidth="1018.0" spacing="20.0">
+      <children>
+        <Hyperlink text="Prenferencias" />
+        <Hyperlink text="" />
+        <Hyperlink onAction="#salir" text="Salir del sistema" />
+      </children>
+      <padding>
+        <Insets right="10.0" />
+      </padding>
+    </HBox>
+    <SplitPane dividerPositions="0.6297828335056876" focusTraversable="true" layoutX="19.0" layoutY="161.0" prefHeight="435.0" prefWidth="969.0">
+      <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="447.0" prefWidth="606.0">
+          <children>
+            <TableView fx:id="tablaServicio" layoutX="14.0" layoutY="101.0" onMouseClicked="#getServicioSeleccionado" prefHeight="313.0" prefWidth="566.0" />
+            <TextField fx:id="tfBuscarServicio" layoutX="36.0" layoutY="38.0" prefWidth="200.0" promptText="Ingrese el Servicio a buscar" />
+            <Button layoutX="280.0" layoutY="38.0" mnemonicParsing="false" onAction="#buscarServicio" styleClass="botones" text="Buscar" textFill="WHITE">
+              <font>
+                <Font name="System Bold" size="12.0" fx:id="x2" />
+              </font>
+              <stylesheets>
+                <URL value="@../img_css/estilo1.css" />
+              </stylesheets>
+            </Button>
+            <Hyperlink layoutX="402.0" layoutY="39.0" text="Vista de impresión" textFill="#0029ff" textOverrun="ELLIPSIS">
+              <font>
+                <Font size="11.0" />
+              </font>
+            </Hyperlink>
+          </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="484.0000999999975" prefWidth="352.0">
+          <children>
+            <Label layoutX="37.0" layoutY="151.0" prefHeight="21.999908447265625" text="Descripción" />
+            <Label layoutX="59.0" layoutY="219.0" prefWidth="40.0" text="Precio" />
+            <TextField fx:id="tfDescripcionServicio" layoutX="135.0" layoutY="151.0" prefWidth="178.0" />
+            <TextField fx:id="tfPrecioServicio" layoutX="135.0" layoutY="213.0" prefWidth="177.33990478515625" />
+            <Button fx:id="btAddServicio" font="$x2" layoutX="74.0" layoutY="295.0" mnemonicParsing="false" onAction="#addServicio" prefHeight="28.0" prefWidth="92.0001220703125" styleClass="botones" text="Añadir" textFill="WHITE">
+              <stylesheets>
+                <URL value="@../img_css/estilo1.css" />
+              </stylesheets>
+            </Button>
+            <Button fx:id="btModificarServicio" font="$x2" layoutX="208.0" layoutY="295.0" mnemonicParsing="false" onAction="#modificarServicio" prefHeight="28.0" prefWidth="96.0" styleClass="botones" text="Modificar" textFill="WHITE">
+              <stylesheets>
+                <URL value="@../img_css/estilo1.css" />
+              </stylesheets>
+            </Button>
+            <Button fx:id="btEliminarServicio" font="$x2" layoutX="74.0" layoutY="340.0" mnemonicParsing="false" onAction="#eliminarServicio" prefHeight="28.0" prefWidth="92.0" styleClass="botones" text="Eliminar" textFill="WHITE">
+              <stylesheets>
+                <URL value="@../img_css/estilo1.css" />
+              </stylesheets>
+            </Button>
+            <Button fx:id="btNuevoServicio" font="$x2" layoutX="208.0" layoutY="340.0" mnemonicParsing="false" onAction="#nuevoServicio" prefHeight="28.0" prefWidth="96.0" styleClass="botones" text="Nuevo" textFill="WHITE">
+              <stylesheets>
+                <URL value="@../img_css/estilo1.css" />
+              </stylesheets>
+            </Button>
+            <Label layoutX="135.0" layoutY="55.0" prefWidth="191.0" text="Servicios" textAlignment="LEFT">
+              <font>
+                <Font name="System Bold" size="14.0" fx:id="x3" />
+              </font>
+            </Label>
+            <Label fx:id="lbCodigoServicio" font="$x3" layoutX="150.0" layoutY="103.0" prefHeight="24.0" prefWidth="174.0" text="" textFill="#cc0000" />
+            <Label layoutX="74.0" layoutY="111.0" text="Cod:" />
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+  </children>
+  <stylesheets>
+    <URL value="@../img_css/estilo1.css" />
+  </stylesheets>
+</AnchorPane>

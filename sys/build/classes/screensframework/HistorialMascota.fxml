@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" fx:id="root" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="650.0" prefWidth="1024.0" styleClass="mainFxmlClass, fondoanchor" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="screensframework.HistorialMascotaController">
+  <children>
+    <HBox alignment="CENTER_RIGHT" layoutX="9.0" layoutY="0.0" prefHeight="38.999900000002526" prefWidth="591.0" spacing="20.0">
+      <children>
+        <Hyperlink text="Preferencias" />
+        <Hyperlink text="Ayuda" />
+        <Hyperlink onAction="#salir" text="Salir del sistema" />
+      </children>
+      <padding>
+        <Insets right="10.0" />
+      </padding>
+    </HBox>
+    <Pane layoutX="9.0" layoutY="119.0" prefHeight="510.0" prefWidth="1008.0" styleClass="paneles">
+      <children>
+        <SplitPane dividerPositions="" focusTraversable="true" layoutX="4.0" layoutY="21.0" prefHeight="179.0" prefWidth="1002.0" />
+        <VBox layoutX="4.0" layoutY="-161.0" prefHeight="120.0" prefWidth="1016.0000136230519">
+          <children>
+            <HBox alignment="CENTER" prefHeight="0.0" prefWidth="1291.0">
+              <children>
+                <HBox alignment="CENTER" prefHeight="192.0" prefWidth="800.0" />
+              </children>
+            </HBox>
+          </children>
+          <stylesheets>
+            <URL value="@../img_css/estilo1.css" />
+          </stylesheets>
+        </VBox>
+        <SplitPane dividerPositions="" focusTraversable="true" layoutX="3.0" layoutY="217.0" prefHeight="249.0" prefWidth="1002.0" />
+        <MenuBar layoutX="-1.0" layoutY="-4.0" minHeight="16.0" prefHeight="23.0" prefWidth="1008.0">
+          <menus>
+            <Menu mnemonicParsing="false" text="Sistema">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#irInicioContenido" text="Inicio" />
+                <MenuItem mnemonicParsing="false" onAction="#cerrarSesion" text="Cerrar sesión" />
+                <MenuItem mnemonicParsing="false" onAction="#salir" text="Salir" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Mantenimiento">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#irMantenimientoCliente" text="Clientes" />
+                <MenuItem mnemonicParsing="false" onAction="#irMantenimientoServicio" text="Servicios" />
+                <MenuItem mnemonicParsing="false" onAction="#irMantenimientoMedicamentos" text="Medicamentos" />
+                <MenuItem mnemonicParsing="false" onAction="#irMantenimientoVacunacion" text="Vacunas" />
+                <MenuItem mnemonicParsing="false" onAction="#irMantenimientoConsulta" text="Consultas" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Ayuda">
+              <items>
+                <MenuItem mnemonicParsing="false" text="A cerca de" />
+              </items>
+            </Menu>
+          </menus>
+        </MenuBar>
+        <HBox layoutX="0.0" layoutY="-111.0" minHeight="106.0" prefHeight="106.0" prefWidth="1007.999977929685" spacing="20.0" styleClass="fondbox">
+          <children>
+            <Label minHeight="55.0" prefHeight="67.0" prefWidth="150.0" styleClass="labels" text="OssaSysVet" textFill="WHITE">
+              <effect>
+                <Bloom />
+              </effect>
+              <font>
+                <Font size="10.0" />
+              </font>
+              <stylesheets>
+                <URL value="@../img_css/estilo1.css" />
+              </stylesheets>
+            </Label>
+            <ImageView fitHeight="83.90665780062697" fitWidth="123.99998474121094" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../img_css/logo-animado4.gif" preserveRatio="false" smooth="false" />
+              </image>
+              <HBox.margin>
+                <Insets fx:id="x1" />
+              </HBox.margin>
+            </ImageView>
+          </children>
+          <effect>
+            <InnerShadow />
+          </effect>
+          <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+          </padding>
+          <stylesheets>
+            <URL value="@../img_css/estilo1.css" />
+          </stylesheets>
+        </HBox>
+        <AnchorPane layoutX="-2.0" layoutY="22.0" minHeight="0.0" minWidth="0.0" prefHeight="178.9998779296875" prefWidth="1008.0">
+          <children>
+            <TextField fx:id="tfBuscarCliente" layoutX="10.0" layoutY="17.0" prefWidth="200.0" promptText="Ingrese Cédula" text="" />
+            <Button layoutX="256.0" layoutY="17.0" mnemonicParsing="false" onAction="#buscarCliente" styleClass="botones" text="Buscar" textFill="WHITE">
+              <font>
+                <Font name="System Bold" size="12.0" fx:id="x2" />
+              </font>
+              <stylesheets>
+                <URL value="@../img_css/estilo1.css" />
+              </stylesheets>
+            </Button>
+            <Label id="" layoutX="14.0" layoutY="78.0" text="Nombre Cliente" />
+            <Label fx:id="lbClieNombre" layoutX="128.0" layoutY="78.0" prefWidth="212.0" text="" />
+            <ComboBox fx:id="combomas" layoutX="424.0" onAction="#comboMascota" layoutY="68.0" prefHeight="21.0"  prefWidth="110.0" promptText="Mascota">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <!-- <String  fx:value="lbClieNombre" />
+                      <String fx:value="Item 2" />
+                      <String fx:value="Item 3" />-->
+                </FXCollections>
+              </items>
+            </ComboBox>
+          </children>
+        </AnchorPane>
+        <AnchorPane layoutX="12.0" layoutY="272.0" minHeight="0.0" minWidth="0.0" prefHeight="178.9998779296875" prefWidth="995.0000999999975">
+          <children>
+            <Label id="lbCodClie" layoutX="114.0" layoutY="67.0" prefWidth="96.0" text="">
+              <textFill>
+                <Color blue="0.000" green="0.000" red="0.800" fx:id="x4" />
+              </textFill>
+            </Label>
+            <Label id="lbClieNombre" layoutX="110.0" layoutY="112.0" prefWidth="110.0" text="" />
+            <AnchorPane layoutX="13.0" layoutY="-55.0" minHeight="0.0" minWidth="476.9605712890625" prefHeight="281.0" prefWidth="977.0">
+              <children>
+                <TableView fx:id="tablaConsultas" layoutX="0.0" layoutY="0.0"  prefHeight="249.0" prefWidth="977.0" />
+              </children>
+            </AnchorPane>
+          </children>
+        </AnchorPane>
+      </children>
+      <effect>
+        <InnerShadow />
+      </effect>
+      <stylesheets>
+        <URL value="@../img_css/estilo1.css" />
+      </stylesheets>
+    </Pane>
+  </children>
+  <stylesheets>
+    <URL value="@../img_css/estilo1.css" />
+  </stylesheets>
+</AnchorPane>

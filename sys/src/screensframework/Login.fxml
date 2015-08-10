@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Ventana Login de Usuario-->
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="1024.0" styleClass="fondoanchor" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="screensframework.LoginController">
+  <children>
+    <VBox id="panelSecundario" prefHeight="600.0" prefWidth="1356.000199999995" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <HBox id="cabecera" prefHeight="171.0" prefWidth="930.0" spacing="20.0" styleClass="fondbox" VBox.margin="$x1">
+          <children>
+            <Label prefWidth="368.0" styleClass="labels" text="OssaSysVet" textFill="WHITE">
+              <effect>
+                <Bloom />
+              </effect>
+              <font>
+                <Font size="17.0" />
+              </font>
+              <stylesheets>
+                <URL value="@../img_css/estilo1.css" />
+              </stylesheets>
+            </Label>
+            <ImageView fitHeight="130.0" fitWidth="190.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../img_css/logo-animado4.gif" preserveRatio="false" smooth="false" />
+              </image>
+              <HBox.margin>
+                <Insets fx:id="x1" />
+              </HBox.margin>
+            </ImageView>
+          </children>
+          <effect>
+            <InnerShadow />
+          </effect>
+          <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+          </padding>
+          <stylesheets>
+            <URL value="@../img_css/estilo1.css" />
+          </stylesheets>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+          <children>
+            <Label prefWidth="663.0" styleClass="labels2" text="¡BIENVENIDO! Inicie sesión para ingresar al sistema">
+              <effect>
+                <Bloom />
+              </effect>
+              <stylesheets>
+                <URL value="@../img_css/estilo1.css" />
+              </stylesheets>
+            </Label>
+          </children>
+        </HBox>
+        <HBox id="" alignment="CENTER" prefHeight="216.0" prefWidth="800.0000999999975">
+          <children>
+            <Pane prefHeight="234.0" prefWidth="343.0" styleClass="paneles">
+              <children>
+                <Label layoutX="45.0" layoutY="42.0" text="Login" />
+                <TextField fx:id="tfUsuario" layoutX="45.0" layoutY="58.0" prefHeight="24.960737500005052" prefWidth="250.0" promptText="nombre de usuario" style="-fx-border-color: #3399CC" />
+                <Label layoutX="45.0" layoutY="90.0" text="Password" />
+                <PasswordField fx:id="tfPass" layoutX="45.0" layoutY="105.0" prefHeight="24.960845947265625" prefWidth="250.0" promptText="Su contraseña" style="-fx-border-color: #3399CC" />
+                <Button layoutX="70.0" layoutY="174.0" mnemonicParsing="false" onAction="#iniciarSesion" prefWidth="84.0" styleClass="botones" text="Entrar" textFill="WHITE">
+                  <stylesheets>
+                    <URL value="@../img_css/estilo1.css" />
+                  </stylesheets>
+                </Button>
+                <Button layoutX="179.0" layoutY="174.0" mnemonicParsing="false" onAction="#salir" prefWidth="84.0" styleClass="botones" text="Salir" textFill="WHITE">
+                  <stylesheets>
+                    <URL value="@../img_css/estilo1.css" />
+                  </stylesheets>
+                </Button>
+              </children>
+              <effect>
+                <InnerShadow />
+              </effect>
+              <stylesheets>
+                <URL value="@../img_css/estilo1.css" />
+              </stylesheets>
+            </Pane>
+          </children>
+          <VBox.margin>
+            <Insets fx:id="x" />
+          </VBox.margin>
+        </HBox>
+        <HBox alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="800.0" spacing="20.0">
+          <children>
+            <Hyperlink text="Prenferencias" />
+            <Hyperlink text="Ayuda" />
+            <Hyperlink onAction="#irFormRegistro" text="Registro" />
+          </children>
+          <padding>
+            <Insets right="10.0" />
+          </padding>
+          <VBox.margin>
+            <Insets top="110.0" />
+          </VBox.margin>
+        </HBox>
+      </children>
+      <stylesheets>
+        <URL value="@../img_css/estilo1.css" />
+      </stylesheets>
+    </VBox>
+  </children>
+  <stylesheets>
+    <URL value="@../img_css/estilo1.css" />
+  </stylesheets>
+</AnchorPane>

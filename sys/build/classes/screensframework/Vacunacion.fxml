@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="1024.0" styleClass="mainFxmlClass, fondoanchor" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="screensframework.VacunacionController">
+  <children>
+    <VBox layoutX="3.0" layoutY="7.0" prefHeight="593.0" prefWidth="1012.0">
+      <children>
+        <HBox prefHeight="162.00009999999747" prefWidth="1011.9998779296875" spacing="20.0" styleClass="fondbox" VBox.margin="$x1">
+          <children>
+            <Label prefWidth="368.0" styleClass="labels" text="OssaSysVet" textFill="WHITE">
+              <effect>
+                <Bloom />
+              </effect>
+              <font>
+                <Font size="17.0" />
+              </font>
+              <stylesheets>
+                <URL value="@../img_css/estilo1.css" />
+              </stylesheets>
+            </Label>
+            <ImageView fitHeight="120.0" fitWidth="190.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../img_css/logo-animado4.gif" preserveRatio="false" smooth="false" />
+              </image>
+              <HBox.margin>
+                <Insets fx:id="x1" />
+              </HBox.margin>
+            </ImageView>
+          </children>
+          <effect>
+            <InnerShadow />
+          </effect>
+          <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+          </padding>
+          <stylesheets>
+            <URL value="@../img_css/estilo1.css" />
+          </stylesheets>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="467.0" prefWidth="1012.0">
+          <children>
+            <Pane prefHeight="454.0" prefWidth="1012.0" styleClass="paneles">
+              <children>
+                <SplitPane dividerPositions="0.6722772277227723" focusTraversable="true" layoutX="0.0" layoutY="0.0" prefHeight="466.999977929685" prefWidth="1012.0">
+                  <items>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="434.0" prefWidth="734.0">
+                      <children>
+                        <TableView fx:id="tablaVacunacion" layoutX="16.0" layoutY="248.0" onMouseClicked="#getVacunacionSeleccionado" prefHeight="175.0" prefWidth="646.0" />
+                        <TextField fx:id="tfBuscarVacunacion" layoutX="21.0" layoutY="211.0" prefWidth="200.0" promptText="Ingrese el Vacunacion a buscar" />
+                        <Button layoutX="253.0" layoutY="37.0" mnemonicParsing="false" onAction="#buscarMedicamentos" styleClass="botones" text="Buscar" textFill="WHITE">
+                          <font>
+                            <Font name="System Bold" size="12.0" fx:id="x2" />
+                          </font>
+                          <stylesheets>
+                            <URL value="@../img_css/estilo1.css" />
+                          </stylesheets>
+                        </Button>
+                        <TableView fx:id="tablaMedicamentos" layoutX="21.0" layoutY="89.0" onMouseClicked="#getMedicamentosSeleccionado" prefHeight="101.0" prefWidth="637.0" />
+                        <!--<Button id="buscarServicio" layoutX="202.0" layoutY="177.0" mnemonicParsing="false" onAction="#buscarServicio" styleClass="botones" prefHeight="23.999900000002526" styleClass="botones" text="Buscar Vacuna" textFill="WHItablaMedicamentosTE">-->
+                        <TextField fx:id="tfBuscarMedicamentos" layoutX="22.0" layoutY="37.0" prefWidth="200.0" promptText="Ingrese vacuna a buscar" />
+                        <Button font="$x2" layoutX="221.0" layoutY="211.0" mnemonicParsing="false" onAction="#buscarVacunacion" styleClass="botones" text="Buscar" textFill="WHITE">
+                          <stylesheets>
+                            <URL value="@../img_css/estilo1.css" />
+                          </stylesheets>
+                        </Button>
+                        <TextField fx:id="tfBuscarMascota" layoutX="303.0" layoutY="212.0" onAction="#buscarVacunacionMascota" prefWidth="105.0" promptText="Ingrese el Cliente  a buscar" />
+                        <Button id="buscarMascota" font="$x2" layoutX="408.0" layoutY="212.0" mnemonicParsing="false" onAction="#buscarVacunacionMascota" styleClass="botones" text="Buscar" textFill="WHITE">
+                          <stylesheets>
+                            <URL value="@../img_css/estilo1.css" />
+                          </stylesheets>
+                        </Button>
+                        <!--<Button id="buscarServicio" layoutX="202.0" layoutY="177.0" mnemonicParsing="false" onAction="#buscarServicio" styleClass="botones" prefHeight="23.999900000002526" styleClass="botones" text="Buscar Vacuna" textFill="WHItablaMedicamentosTE">-->
+                        <TextField fx:id="tfBuscarTipo" layoutX="355.0" layoutY="37.0" prefWidth="200.0" promptText="Buscar por tipo" />
+                        <Button font="$x2" layoutX="598.0" layoutY="40.0" mnemonicParsing="false" onAction="#buscarTipo" styleClass="botones" text="Buscar" textFill="WHITE">
+                          <stylesheets>
+                            <URL value="@../img_css/estilo1.css" />
+                          </stylesheets>
+                        </Button>
+                        <Button id="buscarvacunaciones" font="$x2" layoutX="495.0" layoutY="433.0" mnemonicParsing="false" onAction="#buscarVacunaciones" prefWidth="150.0" styleClass="botones" text="Aviso Vacunaciones" textFill="WHITE">
+                          <stylesheets>
+                            <URL value="@../img_css/estilo1.css" />
+                          </stylesheets>
+                        </Button>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane fx:id="buscarVacunaciones" minHeight="0.0" minWidth="0.0" prefHeight="465.0" prefWidth="331.0">
+                      <children>
+                        <Label layoutX="43.0" layoutY="211.0" minHeight="13.0" prefHeight="22.0" prefWidth="39.999900000002526" text="Vacuna" />
+                        <Label layoutX="50.0" layoutY="255.0" prefHeight="24.0" text="Fecha" />
+                        <Label layoutX="15.0" layoutY="315.0" text="fecha Proxima" />
+                        <TextField fx:id="tfNombreVacunacion" layoutX="117.0" layoutY="211.0" prefWidth="178.0" />
+                        <TextField fx:id="tfFechaVacunacion" layoutX="117.0" layoutY="256.0" prefWidth="177.33990478515625" />
+                        <TextField fx:id="tfFechaProximaVacunacion" layoutX="117.0" layoutY="315.0" prefWidth="177.33990478515625" />
+                        <Button fx:id="btAddVacunacion" font="$x2" layoutX="177.0" layoutY="381.0" mnemonicParsing="false" onAction="#addVacunacion" prefWidth="92.0" styleClass="botones" text="Añadir" textFill="WHITE">
+                          <stylesheets>
+                            <URL value="@../img_css/estilo1.css" />
+                          </stylesheets>
+                        </Button>
+                        <Button fx:id="btModificarVacunacion" font="$x2" layoutX="66.0" layoutY="418.0" mnemonicParsing="false" onAction="#modificarVacunacion" prefWidth="92.0" styleClass="botones" text="Modificar" textFill="WHITE">
+                          <stylesheets>
+                            <URL value="@../img_css/estilo1.css" />
+                          </stylesheets>
+                        </Button>
+                        <Button fx:id="btEliminarVacunacion" font="$x2" layoutX="177.0" layoutY="418.0" mnemonicParsing="false" onAction="#eliminarVacunacion" prefWidth="92.0" styleClass="botones" text="Eliminar" textFill="WHITE">
+                          <stylesheets>
+                            <URL value="@../img_css/estilo1.css" />
+                          </stylesheets>
+                        </Button>
+                        <Button fx:id="btNuevoVacunacion" font="$x2" layoutX="66.0" layoutY="381.0" mnemonicParsing="false" onAction="#nuevoVacunacion" prefHeight="23.0" prefWidth="92.0" styleClass="botones" text="Nuevo" textFill="WHITE">
+                          <stylesheets>
+                            <URL value="@../img_css/estilo1.css" />
+                          </stylesheets>
+                        </Button>
+                        <Label layoutX="14.0" layoutY="28.0" prefWidth="105.0" text="Vacunacion" textAlignment="LEFT">
+                          <font>
+                            <Font name="System Bold" size="14.0" fx:id="x3" />
+                          </font>
+                        </Label>
+                        <Label fx:id="lbCodigoVacunacion" font="$x3" layoutX="218.0" layoutY="22.0" prefHeight="24.0" prefWidth="50.0" text="">
+                          <textFill>
+                            <Color blue="0.000" green="0.000" red="0.800" fx:id="x4" />
+                          </textFill>
+                        </Label>
+                        <!--  <Label layoutX="164.0" layoutY="30.0" text="Cod:" />-->
+                        <Label layoutX="206.0" layoutY="279.0" text="dd/MM/aa" />
+                        <Label layoutX="208.0" layoutY="337.0" text="dd/MM/aa" />
+                        <ComboBox fx:id="combomas" layoutX="113.0" layoutY="148.0" prefHeight="21.0" prefWidth="177.33990478515625" promptText="Mascota">
+                          <items>
+                            <FXCollections fx:factory="observableArrayList">
+                              <!-- <String fx:value="Item 1" />
+                              <String fx:value="Item 2" />
+                              <String fx:value="Item 3" />-->
+                            </FXCollections>
+                          </items>
+                        </ComboBox>
+                        <!-- <Label layoutX="15.0" layoutY="115.0" text="Cod Cliente" />-->
+                        <Label layoutX="43.0" layoutY="118.0" prefWidth="40.0" text="Cliente" />
+                        <!-- <Label fx:id="lbCodiCliente" font="$x3" layoutX="110.0" layoutY="105.0" prefHeight="24.0" prefWidth="92.0" text="" textFill="$x4" />-->
+                        <Label fx:id="lbNomiCliente" font="$x3" layoutX="112.0" layoutY="106.0" prefHeight="24.0" prefWidth="177.33990478515625" text="" textFill="$x4" />
+                        <TextField fx:id="tfBuscarCliente" layoutX="112.0" layoutY="74.0" prefWidth="177.33990478515625" promptText="Ingrese Cédula" text="" />
+                        <Button layoutX="24.0" layoutY="74.0" mnemonicParsing="false" onAction="#buscarCliente" prefHeight="23.999900000002526" styleClass="botones" text="Buscar" textFill="WHITE">
+                          <stylesheets>
+                            <URL value="@../img_css/estilo1.css" />
+                          </stylesheets>
+                        </Button>
+                      </children>
+                    </AnchorPane>
+                  </items>
+                </SplitPane>
+              </children>
+              <effect>
+                <InnerShadow />
+              </effect>
+              <stylesheets>
+                <URL value="@../img_css/estilo1.css" />
+              </stylesheets>
+            </Pane>
+          </children>
+          <VBox.margin>
+            <Insets fx:id="x" />
+          </VBox.margin>
+        </HBox>
+      </children>
+      <stylesheets>
+        <URL value="@../img_css/estilo1.css" />
+      </stylesheets>
+    </VBox>
+    <HBox alignment="CENTER_RIGHT" layoutX="-9.0" layoutY="623.0" prefHeight="57.0" prefWidth="1336.0" spacing="20.0">
+      <children>
+        <Hyperlink text="Prenferencias" />
+        <Hyperlink text="" />
+        <Hyperlink onAction="#salir" text="Salir del sistema" />
+      </children>
+      <padding>
+        <Insets right="10.0" />
+      </padding>
+    </HBox>
+    <HBox alignment="CENTER" layoutX="3.0" layoutY="164.0" minHeight="22.0" prefHeight="22.0" prefWidth="1011.9998779296875">
+      <children>
+        <MenuBar prefWidth="1012.0">
+          <menus>
+            <Menu mnemonicParsing="false" text="Sistema">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#irInicioContenido" text="Inicio" />
+                <MenuItem mnemonicParsing="false" onAction="#cerrarSesion" text="Cerrar sesión" />
+                <MenuItem mnemonicParsing="false" onAction="#salir" text="Salir" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Mantenimiento">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#irMantenimientoCliente" text="Clientes" />
+                <MenuItem mnemonicParsing="false" onAction="#irMantenimientoMascotas" text="Mascotas" />
+                <MenuItem mnemonicParsing="false" onAction="#irMantenimientoServicio" text="Servicios" />
+                <MenuItem mnemonicParsing="false" onAction="#irMantenimientoMedicamentos" text="Medicamentos" />
+                <MenuItem mnemonicParsing="false" onAction="#irMantenimientoConsulta" text="Consultas" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="">
+              <items>
+                <MenuItem mnemonicParsing="false" text="A cerca de" />
+              </items>
+            </Menu>
+          </menus>
+        </MenuBar>
+      </children>
+    </HBox>
+  </children>
+  <stylesheets>
+    <URL value="@../img_css/estilo1.css" />
+  </stylesheets>
+</AnchorPane>
